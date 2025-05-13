@@ -12,3 +12,17 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById("footer-placeholder").innerHTML = data;
     });
 });
+
+function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      const hamburger = document.getElementById("hamburger");
+  
+      navLinks.classList.toggle("active");
+  
+
+      if (navLinks.classList.contains("active")) {
+        hamburger.innerHTML = "✖";
+      } else {
+        hamburger.innerHTML = "☰";
+      }
+    }
