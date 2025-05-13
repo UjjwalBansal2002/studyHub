@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyBuddy - Home</title>
+  <link rel="stylesheet" href="../home/style.css">
+  <link rel="stylesheet" href="studyMaterial.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">StudyBuddy</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../syllabus/syllabus.html">Syllabus</a></li>
+        <li><a href="studyMaterial.html">Study Material</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <input type="search" placeholder="Search..." class="search-box">
+  </header>
+
+
+
+  <h1>🎓 University Sample & Previous Papers</h1>
+
+  <!-- Example University Block -->
+  <div class="university">
+    <h2>Delhi Technical University (DTU)</h2>
+
+    <div class="semester">
+      <button onclick="toggleContent('dtu-sem1')">📘 Semester 1</button>
+      <div class="subjects" id="dtu-sem1">
+        <div class="subject" onclick="toggleContent('dtu-sem1-sub1')">Mathematics-I</div>
+        <div class="units" id="dtu-sem1-sub1">
+          <div class="unit">Unit 1: Differential Calculus</div>
+          <div class="unit">Unit 2: Integral Calculus</div>
+          <div class="unit">Unit 3: Series</div>
+          <div class="unit">Unit 4: Fourier</div>
+          <div class="unit">Unit 5: Laplace Transforms</div>
+        </div>
+
+        <div class="subject" onclick="toggleContent('dtu-sem1-sub2')">Physics</div>
+        <div class="units" id="dtu-sem1-sub2">
+          <div class="unit">Unit 1: Optics</div>
+          <div class="unit">Unit 2: Electromagnetism</div>
+          <div class="unit">Unit 3: Quantum</div>
+          <div class="unit">Unit 4: Wave Theory</div>
+          <div class="unit">Unit 5: Relativity</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat for other semesters -->
+    <div class="semester">
+      <button onclick="toggleContent('dtu-sem2')">📘 Semester 2</button>
+      <div class="subjects" id="dtu-sem2">
+        <div class="subject" onclick="toggleContent('dtu-sem2-sub1')">Mathematics-II</div>
+        <div class="units" id="dtu-sem2-sub1">
+          <div class="unit">Unit 1: Matrices</div>
+          <div class="unit">Unit 2: Differential Equations</div>
+          <div class="unit">Unit 3: Vector Calculus</div>
+          <div class="unit">Unit 4: Complex Numbers</div>
+          <div class="unit">Unit 5: Numerical Methods</div>
+        </div>
+        <!-- Add more subjects -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Another Example University -->
+  <div class="university">
+    <h2>Lovely Professional University (LPU)</h2>
+    <div class="semester">
+      <button onclick="toggleContent('lpu-sem1')">📗 Semester 1</button>
+      <div class="subjects" id="lpu-sem1">
+        <div class="subject" onclick="toggleContent('lpu-sem1-sub1')">Introduction to Programming</div>
+        <div class="units" id="lpu-sem1-sub1">
+          <div class="unit">Unit 1: Basics</div>
+          <div class="unit">Unit 2: Loops</div>
+          <div class="unit">Unit 3: Functions</div>
+          <div class="unit">Unit 4: Arrays</div>
+          <div class="unit">Unit 5: Pointers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(id) {
+      const el = document.getElementById(id);
+      if (el.style.display === "block") {
+        el.style.display = "none";
+      } else {
+        el.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

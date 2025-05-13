@@ -1,0 +1,50 @@
+.topic-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+h1 {
+    color: #0044cc;
+    text-align: center;
+}
+
+.section h2 {
+    margin-top: 1.5em;
+    font-weight: 700;
+}
+
+.section p {
+    font-size: 17px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.code-block {
+    background-color: #151515;
+    padding: 30px 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    /* white-space: pre-wrap; */
+    color: white;
+}
+
+pre {
+    background-color: #151515;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    color: white;
+}
