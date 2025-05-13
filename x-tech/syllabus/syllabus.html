@@ -14,8 +14,9 @@
 <body>
   <header class="navbar" id="navbar">
     <div class="logo">StudyBuddy</div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
     <nav>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="../index.html">Home</a></li>
         <li><a href="syllabus.html">Syllabus</a></li>
         <li class=""><a href="../studyMaterial/studyMaterial.html">Study Material</a></li>
@@ -72,6 +73,23 @@
     <div>Contact: studybuddy@example.com</div>
     <div>Follow us on social media 🔗</div>
   </footer>
+
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      const hamburger = document.getElementById("hamburger");
+  
+      navLinks.classList.toggle("active");
+  
+
+      if (navLinks.classList.contains("active")) {
+        hamburger.innerHTML = "✖";
+      } else {
+        hamburger.innerHTML = "☰";
+      }
+    }
+  </script>
 </body>
 
 </html>
