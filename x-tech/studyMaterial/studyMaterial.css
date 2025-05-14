@@ -1,79 +1,82 @@
-/* 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f4f7fb;
-      color: #333;
-      margin: 0;
-      padding: 20px;
-    } */
-    h1 {
-      text-align: center;
-      color: #1e90ff;
-      margin-bottom: 40px;
+  h1 {
+    text-align: center;
+    color: #1e90ff;
+    margin: 40px 0px;
+  }
+
+  .box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    animation: fadeIn .5s ease-in;
+    width: 100%;
+    margin: 40px 0px;
+  }
+
+  .semester-grid {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sem-card {
+    background: #1e90ff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    font-weight: bold;
+    animation: zoomIn 1s ease;
+  }
+
+  .sem-card:hover {
+    transform: scale(1.05);
+    background: #007be5;
+  }
+
+  .university-box-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .course-header {
+    margin: 30px 200px;
+    padding: 10px 40px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    animation: fadeIn .5s ease-in;
+  }
+
+  .course {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    height: 350px;
+  }
+
+  .semester-grid a{
+    text-decoration: none;
+    color: white;
+  }
+
+
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
     }
 
-    .university {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-      padding: 20px;
-      animation: fadeSlide 1s ease;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    .university h2 {
-      margin: 0;
-      font-size: 1.8rem;
-      color: #333;
-      border-left: 5px solid #1e90ff;
-      padding-left: 10px;
-    }
-
-    .semester {
-      margin-top: 20px;
-    }
-
-    .semester button {
-      width: 100%;
-      padding: 12px;
-      font-size: 1rem;
-      text-align: left;
-      background-color: #e6f0ff;
-      border: none;
-      border-radius: 6px;
-      margin-bottom: 10px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .semester button:hover {
-      background-color: #d2e4ff;
-    }
-
-    .subjects, .units {
-      display: none;
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    .subject {
-      margin: 8px 0;
-      background-color: #f9fbfd;
-      padding: 10px;
-      border-left: 3px solid #1e90ff;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .unit {
-      margin: 5px 0 5px 15px;
-      padding: 8px;
-      background-color: #f0f5ff;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-
-    @keyframes fadeSlide {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  }
