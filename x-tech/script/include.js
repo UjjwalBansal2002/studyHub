@@ -49,10 +49,4 @@ function toggleMenu() {
 
 
 
-(function loadAdScript() {
-  var script = document.createElement("script");
-  script.async = true;
-  script.setAttribute("data-cfasync", "false");
-  script.src = "//pl26639497.profitableratecpm.com/f495eac7699c1bdfe9efd1a042be541b/invoke.js";
-  document.head.appendChild(script);
-})();
+
