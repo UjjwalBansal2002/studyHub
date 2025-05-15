@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,29 +9,31 @@
   <link rel="stylesheet" href="contact.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <script async="async" data-cfasync="false"
-src="//pl26639497.profitableratecpm.com/f495eac7699c1bdfe9efd1a042be541b/invoke.js"></script>
+    src="//pl26639497.profitableratecpm.com/f495eac7699c1bdfe9efd1a042be541b/invoke.js"></script>
   <header class="navbar">
     <div class="logo">StudyBuddy</div>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
     <nav>
       <ul class="nav-links" id="navLinks">
-       <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="../syllabus/syllabus.html">Syllabus</a></li>
         <li><a href="../studyMaterial/studyMaterial.html">Study Material</a></li>
         <li><a href="../about/about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <input type="search" placeholder="Search..." class="search-box">
-  </header> 
- 
+    <!-- <input type="search" placeholder="Search..." class="search-box"> -->
+  </header>
+
   <div class="contact-container">
     <h1 class="contact-title">📬 Contact Us</h1>
-    <p style="text-align:center;">We’d love to hear from you! Whether you're a student, coder, or educator — drop your questions or suggestions anytime.</p>
+    <p style="text-align:center;">We’d love to hear from you! Whether you're a student, coder, or educator — drop your
+      questions or suggestions anytime.</p>
 
-    <form>
+    <form id="contactForm">
       <div class="form-group">
         <input type="text" name="name" id="name" placeholder=" " required>
         <label for="name">Your Name</label>
@@ -76,9 +79,9 @@ src="//pl26639497.profitableratecpm.com/f495eac7699c1bdfe9efd1a042be541b/invoke.
     function toggleMenu() {
       const navLinks = document.getElementById("navLinks");
       const hamburger = document.getElementById("hamburger");
-  
+
       navLinks.classList.toggle("active");
-  
+
 
       if (navLinks.classList.contains("active")) {
         hamburger.innerHTML = "✖";
@@ -86,7 +89,29 @@ src="//pl26639497.profitableratecpm.com/f495eac7699c1bdfe9efd1a042be541b/invoke.
         hamburger.innerHTML = "☰";
       }
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contactForm");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        const whatsappNumber = "91XXXXXXXXXX"; // Replace with your number
+        const encodedMsg = encodeURIComponent(
+          `Hello, I'm ${name}\nEmail: ${email}\nQuery: ${message}`
+        );
+
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMsg}`;
+        window.open(whatsappURL, "_blank");
+      });
+    });
   </script>
 
+
 </body>
+
 </html>
